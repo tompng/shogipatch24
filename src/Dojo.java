@@ -4,10 +4,10 @@ import java.util.HashMap;
 public class Dojo{
 	static File root=null,res=null;
 	public static File getRootDir(){
-		// try{
-		// 	if(root==null)root=new File(System.getProperty("java.class.path")).getCanonicalFile().getParentFile();
-		// 	return root;
-		// }catch(Exception e){}
+		try{
+			if(root==null)root=new File(System.getProperty("java.class.path")).getCanonicalFile().getParentFile();
+			return root;
+		}catch(Exception e){}
 		return new File(".");
 	}
 	public static File getResDir(){
